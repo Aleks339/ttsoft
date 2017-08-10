@@ -1,0 +1,51 @@
+//text-transform
+@uppercase: uppercase;
+@none: none;
+
+//colors
+@black:black;
+@DeepPink:DeepPink;
+@HotPink:HotPink;
+@blue:blue;
+@white:white;
+@darkolivegreen:darkolivegreen;
+
+//position
+@relative:relative;
+
+.nav{
+   .item {
+       text-transform: @uppercase;
+       .dropdown, .dropdown-menu{
+            background-color: @HotPink;
+            .inside_item {
+               text-transform: @none;
+           }
+       }
+    } 
+} 
+.black {
+    background: @black;
+    form {
+       position: @relative;
+       top: 40px; 
+        .submit {
+            background-color: @DeepPink;
+            color:@white;            
+        }
+        .reset{
+            background-color: @blue;
+            color:@white;
+        }
+    }     
+}
+main {
+    .text_block {
+        margin-top: 10px;
+        margin-right:10px;
+        height:100%;
+        .col-xs-3{            
+            background-color: @darkolivegreen;
+        }      
+    }
+}

@@ -26,7 +26,9 @@ html, body{
     } 
     .sidebar {
         height:100%;
-        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
         background: @sideBarBgColor;
         @media screen and  (max-width: 960px) {
             display: none;
@@ -53,19 +55,23 @@ html, body{
         }
     }
     .main {
+        align-content: center;
         @media screen and  (max-width: 960px) {
                 width: 96%;
          }
         @media screen and  (min-width: 960px) {
                 width: 960px;
          }
-        .text_block {
-            margin-top: 15px;
+        .col-sm-3 {
             margin-left:15px;
-            height:100%;
-            max-height: 210px;
-            overflow: hidden;
-            background-color: @colorOfTextBlocks;      
+            height: 210px;
+            min-height: 100%;
+            .text_block {
+                float:left;
+                padding:5%;
+                text-align:left;
+                background-color: @colorOfTextBlocks;      
+            }
         }
     }
 }

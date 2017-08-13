@@ -35,7 +35,9 @@ body .nav .item .dropdown-menu .inside_item:hover {
 html .sidebar,
 body .sidebar {
   height: 100%;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: black;
 }
 @media screen and (max-width: 960px) {
@@ -76,6 +78,10 @@ html .sidebar form .reset,
 body .sidebar form .reset {
   background-color: blue;
 }
+html .main,
+body .main {
+  align-content: center;
+}
 @media screen and (max-width: 960px) {
   html .main,
   body .main {
@@ -88,12 +94,16 @@ body .sidebar form .reset {
     width: 960px;
   }
 }
-html .main .text_block,
-body .main .text_block {
-  margin-top: 15px;
+html .main .col-sm-3,
+body .main .col-sm-3 {
   margin-left: 15px;
-  height: 100%;
-  max-height: 210px;
-  overflow: hidden;
+  height: 210px;
+  min-height: 100%;
+}
+html .main .col-sm-3 .text_block,
+body .main .col-sm-3 .text_block {
+  float: left;
+  padding: 5%;
+  text-align: left;
   background-color: yellowgreen;
 }

@@ -3,6 +3,7 @@ body {
   height: 100%;
   width: 96%;
   align-content: center;
+  background-color: #f6f2f1;
 }
 html .nav .item,
 body .nav .item {
@@ -12,7 +13,7 @@ html .nav .item .dropdown,
 body .nav .item .dropdown,
 html .nav .item .dropdown-menu,
 body .nav .item .dropdown-menu {
-  background-color: HotPink;
+  background-color: #e7a7a5;
 }
 html .nav .item .dropdown .active:hover,
 body .nav .item .dropdown .active:hover,
@@ -32,7 +33,7 @@ html .nav .item .dropdown .inside_item:hover,
 body .nav .item .dropdown .inside_item:hover,
 html .nav .item .dropdown-menu .inside_item:hover,
 body .nav .item .dropdown-menu .inside_item:hover {
-  background-color: lightSkyBlue;
+  background-color: #cccccc;
 }
 html .sidebar,
 body .sidebar {
@@ -75,11 +76,11 @@ body .sidebar form button {
 }
 html .sidebar form .submit,
 body .sidebar form .submit {
-  background-color: DeepPink;
+  background-color: #e524ff;
 }
 html .sidebar form .reset,
 body .sidebar form .reset {
-  background-color: blue;
+  background-color: #2435cb;
 }
 html .main,
 body .main {
@@ -102,5 +103,5 @@ body .main .col-sm-3 .text_block {
   float: left;
   padding: 5%;
   text-align: left;
-  background-color: yellowgreen;
+  background-color: #d3c57a;
 }

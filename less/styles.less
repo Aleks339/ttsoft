@@ -1,26 +1,28 @@
 //colors
+@bodyColor: rgb(246, 242, 241);
 @sideBarBgColor:black;
-@menuInsideColor:HotPink;
-@menuInsideHoverColor:lightSkyBlue;
-@submitColor:DeepPink;
-@resetColor:blue;
+@subMenuColor:rgb(231, 167, 165);
+@subMenuHoverColor:rgb(204, 204, 204);
+@submitColor:rgb(229, 36, 255);
+@resetColor:rgb(36, 53, 203);
 @sideBarTextColor:white;
-@colorOfTextBlocks:yellowgreen;
+@colorOfTextBlocks:rgb(211,197,122);
 
 
 html, body{
     height:100%;
     width:96%;
     align-content: center;
-    .nav{
+    background-color: @bodyColor;
+     .nav{
        .item {
            text-transform: uppercase;
            .dropdown, .dropdown-menu{
-                background-color: @menuInsideColor;
+                background-color: @subMenuColor;
                 .active:hover, .inside_item {
                    text-transform: none;
                     &:hover {
-                        background-color: @menuInsideHoverColor;
+                        background-color: @subMenuHoverColor;
                     }
                }
            }

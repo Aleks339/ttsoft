@@ -1,51 +1,71 @@
-//text-transform
-@uppercase: uppercase;
-@none: none;
-
 //colors
-@black:black;
-@DeepPink:DeepPink;
-@HotPink:HotPink;
-@blue:blue;
-@white:white;
-@darkolivegreen:darkolivegreen;
+@sideBarBgColor:black;
+@menuInsideColor:HotPink;
+@menuInsideHoverColor:lightSkyBlue;
+@submitColor:DeepPink;
+@resetColor:blue;
+@sideBarTextColor:white;
+@colorOfTextBlocks:yellowgreen;
 
-//position
-@relative:relative;
 
-.nav{
-   .item {
-       text-transform: @uppercase;
-       .dropdown, .dropdown-menu{
-            background-color: @HotPink;
-            .inside_item {
-               text-transform: @none;
+html, body{
+    height:100%;
+    .nav{
+       .item {
+           text-transform: uppercase;
+           .dropdown, .dropdown-menu{
+                background-color: @menuInsideColor;
+                .active:hover, .inside_item {
+                   text-transform: none;
+                    &:hover {
+                        background-color: @menuInsideHoverColor;
+                    }
+               }
            }
-       }
+        } 
     } 
-} 
-.black {
-    background: @black;
-    form {
-       position: @relative;
-       top: 40px; 
-        .submit {
-            background-color: @DeepPink;
-            color:@white;            
-        }
-        .reset{
-            background-color: @blue;
-            color:@white;
-        }
-    }     
-}
-main {
-    .text_block {
-        margin-top: 10px;
-        margin-right:10px;
+    .sidebar {
         height:100%;
-        .col-xs-3{            
-            background-color: @darkolivegreen;
-        }      
+        width: 100%;
+        background: @sideBarBgColor;
+        @media screen and  (max-width: 960px) {
+            display: none;
+        }
+        form {
+           position: relative;
+           top: 40px;
+            #text, #pwd {
+                margin: auto;
+                width: 75%;
+            }
+            label, .submit, .reset {
+                color:@sideBarTextColor;
+            }
+            button {
+                display: inline;
+            }
+            .submit {
+                background-color: @submitColor;            
+            }
+            .reset{
+                background-color: @resetColor;
+            }
+        }
+    }
+    .main {
+        @media screen and  (max-width: 960px) {
+                width: 96%;
+         }
+        @media screen and  (min-width: 960px) {
+                width: 960px;
+         }
+        .text_block {
+            margin-top: 15px;
+            margin-left:15px;
+            height:100%;
+            max-height: 210px;
+            overflow: hidden;
+            background-color: @colorOfTextBlocks;      
+        }
     }
 }

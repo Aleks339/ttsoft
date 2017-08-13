@@ -1,34 +1,99 @@
-.nav .item {
+html,
+body {
+  height: 100%;
+}
+html .nav .item,
+body .nav .item {
   text-transform: uppercase;
 }
-.nav .item .dropdown,
-.nav .item .dropdown-menu {
+html .nav .item .dropdown,
+body .nav .item .dropdown,
+html .nav .item .dropdown-menu,
+body .nav .item .dropdown-menu {
   background-color: HotPink;
 }
-.nav .item .dropdown .inside_item,
-.nav .item .dropdown-menu .inside_item {
+html .nav .item .dropdown .active:hover,
+body .nav .item .dropdown .active:hover,
+html .nav .item .dropdown-menu .active:hover,
+body .nav .item .dropdown-menu .active:hover,
+html .nav .item .dropdown .inside_item,
+body .nav .item .dropdown .inside_item,
+html .nav .item .dropdown-menu .inside_item,
+body .nav .item .dropdown-menu .inside_item {
   text-transform: none;
 }
-.black {
+html .nav .item .dropdown .active:hover:hover,
+body .nav .item .dropdown .active:hover:hover,
+html .nav .item .dropdown-menu .active:hover:hover,
+body .nav .item .dropdown-menu .active:hover:hover,
+html .nav .item .dropdown .inside_item:hover,
+body .nav .item .dropdown .inside_item:hover,
+html .nav .item .dropdown-menu .inside_item:hover,
+body .nav .item .dropdown-menu .inside_item:hover {
+  background-color: lightSkyBlue;
+}
+html .sidebar,
+body .sidebar {
+  height: 100%;
+  width: 100%;
   background: black;
 }
-.black form {
+@media screen and (max-width: 960px) {
+  html .sidebar,
+  body .sidebar {
+    display: none;
+  }
+}
+html .sidebar form,
+body .sidebar form {
   position: relative;
   top: 40px;
 }
-.black form .submit {
+html .sidebar form #text,
+body .sidebar form #text,
+html .sidebar form #pwd,
+body .sidebar form #pwd {
+  margin: auto;
+  width: 75%;
+}
+html .sidebar form label,
+body .sidebar form label,
+html .sidebar form .submit,
+body .sidebar form .submit,
+html .sidebar form .reset,
+body .sidebar form .reset {
+  color: white;
+}
+html .sidebar form button,
+body .sidebar form button {
+  display: inline;
+}
+html .sidebar form .submit,
+body .sidebar form .submit {
   background-color: DeepPink;
-  color: white;
 }
-.black form .reset {
+html .sidebar form .reset,
+body .sidebar form .reset {
   background-color: blue;
-  color: white;
 }
-main .text_block {
-  margin-top: 10px;
-  margin-right: 10px;
+@media screen and (max-width: 960px) {
+  html .main,
+  body .main {
+    width: 96%;
+  }
+}
+@media screen and (min-width: 960px) {
+  html .main,
+  body .main {
+    width: 960px;
+  }
+}
+html .main .text_block,
+body .main .text_block {
+  margin-top: 15px;
+  margin-left: 15px;
   height: 100%;
-}
-main .text_block .col-xs-3 {
-  background-color: darkolivegreen;
+  max-height: 210px;
+  overflow: hidden;
+  background-color: yellowgreen;
 }

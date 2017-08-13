@@ -1,6 +1,8 @@
 html,
 body {
   height: 100%;
+  width: 96%;
+  align-content: center;
 }
 html .nav .item,
 body .nav .item {
@@ -35,6 +37,7 @@ body .nav .item .dropdown-menu .inside_item:hover {
 html .sidebar,
 body .sidebar {
   height: 100%;
+  width: 30%;
   position: fixed;
   top: 0;
   left: 0;
@@ -86,12 +89,6 @@ body .main {
   html .main,
   body .main {
     width: 96%;
-  }
-}
-@media screen and (min-width: 960px) {
-  html .main,
-  body .main {
-    width: 960px;
   }
 }
 html .main .col-sm-3,

@@ -4,11 +4,17 @@ body {
   align-content: center;
   background-color: #f6f2f1;
 }
+.container {
+  max-width: 960px;
+  display: table;
+}
 .nav {
   background-color: #f6f2f1;
   border: 0px;
 }
-.nav .open > a {
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
   background-color: #e7a7a5;
 }
 .nav .navbar-header {
@@ -20,7 +26,8 @@ body {
 .nav .item a {
   color: black;
 }
-.nav .item a:hover {
+.nav .item a:hover,
+.nav .item a:focus {
   background-color: #e7a7a5;
 }
 .nav .item .dropdown-menu {
@@ -35,16 +42,9 @@ body {
 }
 .sidebar {
   height: 100%;
-  width: 30%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  width: 29%;
   background: black;
-}
-@media screen and (max-width: 960px) {
-  .sidebar {
-    display: none;
-  }
+  display: table-cell;
 }
 .sidebar form {
   position: relative;
@@ -61,7 +61,7 @@ body {
   color: white;
 }
 .sidebar form button {
-  display: inline;
+  display: table-cell;
 }
 .sidebar form .submit {
   background-color: #e524ff;
@@ -71,11 +71,8 @@ body {
 }
 .main {
   align-content: center;
-}
-@media screen and (max-width: 960px) {
-  .main {
-    width: 96%;
-  }
+  min-height: 70%;
+  display: table-cell;
 }
 .main .col-sm-3 {
   margin-left: 15px;
@@ -88,4 +85,12 @@ body {
   padding: 5%;
   align-content: left;
   background-color: #d3c57a;
+}
+@media screen and (max-width: 960px) {
+  .main {
+    width: 96%;
+  }
+  .sidebar {
+    display: none;
+  }
 }

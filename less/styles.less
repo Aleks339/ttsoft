@@ -14,10 +14,14 @@ html, body{
     align-content: center;
     background-color: @bodyColor;
 }
+.container {
+    max-width:960px;
+    display: table;
+}
  .nav{
      background-color: @bodyColor;
      border:0px;
-     .open > a {
+     .open > a, .open > a:hover, .open > a:focus {
         background-color: @subMenuColor;
       }
      .navbar-header {
@@ -27,7 +31,7 @@ html, body{
        text-transform: uppercase;
        a{
          color:black; 
-         &:hover{
+         &:hover, &:focus{
                background-color: @subMenuColor;
            }
        }
@@ -44,14 +48,9 @@ html, body{
 } 
 .sidebar {
     height:100%;
-    width: 30%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 29%;
     background: @sideBarBgColor;
-    @media screen and  (max-width: 960px) {
-        display: none;
-    }
+    display: table-cell;
     form {
        position: relative;
        top: 40px;
@@ -63,7 +62,7 @@ html, body{
             color:@sideBarTextColor;
         }
         button {
-            display: inline;
+            display: table-cell;
         }
         .submit {
             background-color: @submitColor;            
@@ -75,9 +74,8 @@ html, body{
 }
 .main {
     align-content: center;
-    @media screen and  (max-width: 960px) {
-            width: 96%;
-     }
+    min-height: 70%;
+    display: table-cell;
     .col-sm-3 {
         margin-left:15px;
         height: 210px;
@@ -90,5 +88,14 @@ html, body{
             background-color: @colorOfTextBlocks;      
         }
     }
+}
+
+@media screen and  (max-width: 960px) {
+    .main{
+        width: 96%;
+    }
+    .sidebar{
+         display: none;
+    }   
 }
 

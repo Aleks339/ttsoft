@@ -48,7 +48,7 @@ html, body{
 } 
 .sidebar {
     height:100%;
-    width: 29%;
+    width: 30%;
     background: @sideBarBgColor;
     display: table-cell;
     form {
@@ -78,9 +78,10 @@ html, body{
     display: table-cell;
     .col-sm-3 {
         margin-left:15px;
-        height: 210px;
+        max-height: 210px;
         min-height: 100%;
         align-content: center;
+        overflow: hidden;
         .text_block {
             float:left;
             padding:5%;
@@ -97,5 +98,10 @@ html, body{
     .sidebar{
          display: none;
     }   
+}
+@media screen and  (min-width: 992px) {
+    .main{
+        width: 960px;
+    } 
 }
 

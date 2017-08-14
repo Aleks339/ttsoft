@@ -42,7 +42,7 @@ body {
 }
 .sidebar {
   height: 100%;
-  width: 29%;
+  width: 30%;
   background: black;
   display: table-cell;
 }
@@ -76,9 +76,10 @@ body {
 }
 .main .col-sm-3 {
   margin-left: 15px;
-  height: 210px;
+  max-height: 210px;
   min-height: 100%;
   align-content: center;
+  overflow: hidden;
 }
 .main .col-sm-3 .text_block {
   float: left;
@@ -92,5 +93,10 @@ body {
   }
   .sidebar {
     display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main {
+    width: 960px;
   }
 }

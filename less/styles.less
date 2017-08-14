@@ -11,69 +11,84 @@
 
 html, body{
     height:100%;
-    width:96%;
     align-content: center;
     background-color: @bodyColor;
-     .nav{
-       .item {
-           text-transform: uppercase;
-           .dropdown, .dropdown-menu{
-                background-color: @subMenuColor;
-                .active:hover, .inside_item {
-                   text-transform: none;
-                    &:hover {
-                        background-color: @subMenuHoverColor;
-                    }
-               }
+}
+ .nav{
+     background-color: @bodyColor;
+     border:0px;
+     .open > a {
+        background-color: @subMenuColor;
+      }
+     .navbar-header {
+         width: 100%;
+     }
+   .item {
+       text-transform: uppercase;
+       a{
+         color:black; 
+         &:hover{
+               background-color: @subMenuColor;
            }
-        } 
+       }
+       .dropdown-menu{
+            background-color: @subMenuColor;
+           .inside_item:hover {
+                 background-color: @subMenuHoverColor;
+            }
+            .active:hover, .inside_item {
+               text-transform: none;
+           }
+       }
     } 
-    .sidebar {
-        height:100%;
-        width: 30%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: @sideBarBgColor;
-        @media screen and  (max-width: 960px) {
-            display: none;
-        }
-        form {
-           position: relative;
-           top: 40px;
-            #text, #pwd {
-                margin: auto;
-                width: 75%;
-            }
-            label, .submit, .reset {
-                color:@sideBarTextColor;
-            }
-            button {
-                display: inline;
-            }
-            .submit {
-                background-color: @submitColor;            
-            }
-            .reset{
-                background-color: @resetColor;
-            }
-        }
+} 
+.sidebar {
+    height:100%;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: @sideBarBgColor;
+    @media screen and  (max-width: 960px) {
+        display: none;
     }
-    .main {
-        align-content: center;
-        @media screen and  (max-width: 960px) {
-                width: 96%;
-         }
-        .col-sm-3 {
-            margin-left:15px;
-            height: 210px;
-            min-height: 100%;
-            .text_block {
-                float:left;
-                padding:5%;
-                text-align:left;
-                background-color: @colorOfTextBlocks;      
-            }
+    form {
+       position: relative;
+       top: 40px;
+        #text, #pwd {
+            margin: auto;
+            width: 75%;
+        }
+        label, .submit, .reset {
+            color:@sideBarTextColor;
+        }
+        button {
+            display: inline;
+        }
+        .submit {
+            background-color: @submitColor;            
+        }
+        .reset{
+            background-color: @resetColor;
         }
     }
 }
+.main {
+    align-content: center;
+    @media screen and  (max-width: 960px) {
+            width: 96%;
+     }
+    .col-sm-3 {
+        margin-left:15px;
+        height: 210px;
+        min-height: 100%;
+        align-content: center;
+        .text_block {
+            float:left;
+            padding:5%;
+            align-content:left;
+            background-color: @colorOfTextBlocks;      
+        }
+    }
+}
+

@@ -1,42 +1,39 @@
 html,
 body {
   height: 100%;
-  width: 96%;
   align-content: center;
   background-color: #f6f2f1;
 }
-html .nav .item,
-body .nav .item {
-  text-transform: uppercase;
+.nav {
+  background-color: #f6f2f1;
+  border: 0px;
 }
-html .nav .item .dropdown,
-body .nav .item .dropdown,
-html .nav .item .dropdown-menu,
-body .nav .item .dropdown-menu {
+.nav .open > a {
   background-color: #e7a7a5;
 }
-html .nav .item .dropdown .active:hover,
-body .nav .item .dropdown .active:hover,
-html .nav .item .dropdown-menu .active:hover,
-body .nav .item .dropdown-menu .active:hover,
-html .nav .item .dropdown .inside_item,
-body .nav .item .dropdown .inside_item,
-html .nav .item .dropdown-menu .inside_item,
-body .nav .item .dropdown-menu .inside_item {
-  text-transform: none;
+.nav .navbar-header {
+  width: 100%;
 }
-html .nav .item .dropdown .active:hover:hover,
-body .nav .item .dropdown .active:hover:hover,
-html .nav .item .dropdown-menu .active:hover:hover,
-body .nav .item .dropdown-menu .active:hover:hover,
-html .nav .item .dropdown .inside_item:hover,
-body .nav .item .dropdown .inside_item:hover,
-html .nav .item .dropdown-menu .inside_item:hover,
-body .nav .item .dropdown-menu .inside_item:hover {
+.nav .item {
+  text-transform: uppercase;
+}
+.nav .item a {
+  color: black;
+}
+.nav .item a:hover {
+  background-color: #e7a7a5;
+}
+.nav .item .dropdown-menu {
+  background-color: #e7a7a5;
+}
+.nav .item .dropdown-menu .inside_item:hover {
   background-color: #cccccc;
 }
-html .sidebar,
-body .sidebar {
+.nav .item .dropdown-menu .active:hover,
+.nav .item .dropdown-menu .inside_item {
+  text-transform: none;
+}
+.sidebar {
   height: 100%;
   width: 30%;
   position: fixed;
@@ -45,63 +42,50 @@ body .sidebar {
   background: black;
 }
 @media screen and (max-width: 960px) {
-  html .sidebar,
-  body .sidebar {
+  .sidebar {
     display: none;
   }
 }
-html .sidebar form,
-body .sidebar form {
+.sidebar form {
   position: relative;
   top: 40px;
 }
-html .sidebar form #text,
-body .sidebar form #text,
-html .sidebar form #pwd,
-body .sidebar form #pwd {
+.sidebar form #text,
+.sidebar form #pwd {
   margin: auto;
   width: 75%;
 }
-html .sidebar form label,
-body .sidebar form label,
-html .sidebar form .submit,
-body .sidebar form .submit,
-html .sidebar form .reset,
-body .sidebar form .reset {
+.sidebar form label,
+.sidebar form .submit,
+.sidebar form .reset {
   color: white;
 }
-html .sidebar form button,
-body .sidebar form button {
+.sidebar form button {
   display: inline;
 }
-html .sidebar form .submit,
-body .sidebar form .submit {
+.sidebar form .submit {
   background-color: #e524ff;
 }
-html .sidebar form .reset,
-body .sidebar form .reset {
+.sidebar form .reset {
   background-color: #2435cb;
 }
-html .main,
-body .main {
+.main {
   align-content: center;
 }
 @media screen and (max-width: 960px) {
-  html .main,
-  body .main {
+  .main {
     width: 96%;
   }
 }
-html .main .col-sm-3,
-body .main .col-sm-3 {
+.main .col-sm-3 {
   margin-left: 15px;
   height: 210px;
   min-height: 100%;
+  align-content: center;
 }
-html .main .col-sm-3 .text_block,
-body .main .col-sm-3 .text_block {
+.main .col-sm-3 .text_block {
   float: left;
   padding: 5%;
-  text-align: left;
+  align-content: left;
   background-color: #d3c57a;
 }

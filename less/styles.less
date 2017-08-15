@@ -1,5 +1,6 @@
 //colors
-@bodyColor: rgb(246, 242, 241);
+@bodyColor:white;
+@containerColor: rgb(246, 242, 241);
 @sideBarBgColor:black;
 @subMenuColor:rgb(231, 167, 165);
 @subMenuHoverColor:rgb(204, 204, 204);
@@ -13,13 +14,20 @@ html, body{
     height:100%;
     align-content: center;
     background-color: @bodyColor;
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
 }
 .container {
+    background-color: @containerColor;
     max-width:960px;
     display: table;
+    padding-left:0;
+    padding-right:0;
+    overflow: hidden;
 }
  .nav{
-     background-color: @bodyColor;
+     background-color: @containerColor;
      border:0px;
      .open > a, .open > a:hover, .open > a:focus {
         background-color: @subMenuColor;
@@ -31,6 +39,7 @@ html, body{
        text-transform: uppercase;
        a{
          color:black; 
+         font-size: 12px;
          &:hover, &:focus{
                background-color: @subMenuColor;
            }
@@ -47,7 +56,7 @@ html, body{
     } 
 } 
 .sidebar {
-    height:100%;
+    min-height:100%;
     width: 30%;
     background: @sideBarBgColor;
     display: table-cell;
@@ -76,19 +85,23 @@ html, body{
     align-content: center;
     min-height: 70%;
     display: table-cell;
-    .col-sm-3 {
-        margin-left:15px;
-        max-height: 210px;
-        min-height: 100%;
-        align-content: center;
+    .row >div {        
         overflow: hidden;
+        height:210px;
         .text_block {
-            float:left;
+            max-height: 210px;
             padding:5%;
-            align-content:left;
             background-color: @colorOfTextBlocks;      
         }
     }
+    .pagination {
+        margin-left: 33%;        
+        a{
+            background-color: @containerColor;
+            color: black;
+            border: 0;
+        }
+    } 
 }
 
 @media screen and  (max-width: 960px) {
@@ -99,8 +112,8 @@ html, body{
          display: none;
     }   
 }
-@media screen and  (min-width: 992px) {
-    .main{
+@media screen and  (min-width: 960px) {
+    .container{
         width: 960px;
     } 
 }

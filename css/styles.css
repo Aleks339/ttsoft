@@ -21,8 +21,15 @@ body {
 }
 .nav .open > a,
 .nav .open > a:hover,
-.nav .open > a:focus {
+.nav .open > a:focus,
+.nav .item:hover {
   background-color: #e7a7a5;
+}
+.nav .dropdown-menu {
+  display: none;
+}
+.nav .item:hover .dropdown-menu {
+  display: block;
 }
 .nav .navbar-header {
   width: 100%;

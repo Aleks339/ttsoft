@@ -29,9 +29,17 @@ html, body{
  .nav{
      background-color: @containerColor;
      border:0px;
-     .open > a, .open > a:hover, .open > a:focus {
+     .open > a, .open > a:hover, .open > a:focus, .item:hover {
         background-color: @subMenuColor;
       }
+     .dropdown-menu{
+         display: none;
+     }
+     .item:hover{
+         .dropdown-menu{
+              display: block;
+         }        
+     }
      .navbar-header {
          width: 100%;
      }
